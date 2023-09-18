@@ -65,3 +65,53 @@ $(window).on("load resize", function () {
         $('body').removeClass('body-small')
     }
 });
+
+const curTabIndex = 0;
+const lastTabIndex = 0;
+
+function focusPreviousElement() {
+    try {
+        curTabIndex = document.activeElement.tabIndex; //get current elements tab index
+
+        if ($("[tabindex=" + nextTabIndex + "]").length == 1) {
+
+            $("[tabindex=" + nextTabIndex + "]").trigger("focus");
+        } else {
+            for (let i = 1; i <= 10; i++) {
+                nextTabIndex = parseInt(curTabIndex) - (i * 20);
+
+                if ($("[tabindex=" + nextTabIndex + "]").length == 1) {
+                    $("[tabindex=" + nextTabIndex + "]").trigger("focus");
+                    break;
+                }
+            }
+        }
+    } catch (err) {
+
+    }
+}
+
+function focusNextElement() {
+    try {
+        curTabIndex = document.activeElement.tabIndex; // get current elements tab index
+
+        const nextTabIndex = parseInt(curTabIndex) + 100;
+
+        if ($("[tabindex=" + nextTabIndex + "]").length == 1) {
+
+            $("[tabindex=" + nextTabIndex + "]").trigger("focus");
+        } else {
+            for (let i = 1; i <= 10; i++) {
+                nextTabIndex = parseInt(curTabIndex) + 1 (i * 20);
+
+                if ($("[tabindex=" + nextTabIndex + "]").length == 1) {
+                    $("[tabindex=" + nextTabIndex + "]").trigger("focus");
+                    break;
+                }
+            }
+        }
+    } catch (err) {
+
+    }
+}
+

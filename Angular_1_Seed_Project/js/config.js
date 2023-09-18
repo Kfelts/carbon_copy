@@ -6,7 +6,15 @@
  * Initial there are written state for all view in theme.
  *
  */
-function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
+function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdleProvider, KeepAliveProvider, $httpProvider) {
+    // Configure Idle Settings
+    IdleProvider.idle(5); //in seconds
+    IdleProvider.timeout(120); //in seconds
+
+    // $httpProvider.inceptors.push('httpAuthInceptor');
+    // $httpProvider.inceptors.push('httpAuthInceptorRequest');
+
+    $urlRouterProvider.when('/');
     $urlRouterProvider.otherwise("/index/main");
 
     $ocLazyLoadProvider.config({
@@ -15,6 +23,11 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
     });
 
     $stateProvider
+
+        .state('/', {
+            url: "/",
+            templateUrl: ""
+        })
 
         .state('index', {
             abstract: true,
@@ -30,6 +43,12 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
             url: "/minor",
             templateUrl: "views/minor.html",
             data: { pageTitle: 'Example view' }
+        })
+
+        .state('dashboards', {
+            abstract: true,
+            url: "/dashboards",
+            templateUrl: "views/common/content.html"
         })
 }
 angular

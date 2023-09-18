@@ -9,6 +9,7 @@ $(document).ready(function () {
 
 
     // Full height of sidebar
+// sourcery skip: avoid-function-declarations-in-blocks
     function fix_height() {
         var heightWithoutNavbar = $("body > #wrapper").height() - 61;
         $(".sidebar-panel").css("min-height", heightWithoutNavbar + "px");

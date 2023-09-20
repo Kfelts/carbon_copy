@@ -228,10 +228,10 @@ function MainCtrl($http) {
      */
     this.randomStacked = function() {
         this.stacked = [];
-        var types = ['success', 'info', 'warning', 'danger'];
+        const types = ['success', 'info', 'warning', 'danger'];
 
         for (var i = 0, n = Math.floor((Math.random() * 4) + 1); i < n; i++) {
-            var index = Math.floor((Math.random() * 4));
+            const index = Math.floor((Math.random() * 4));
             this.stacked.push({
                 value: Math.floor((Math.random() * 30) + 1),
                 type: types[index]
@@ -358,7 +358,7 @@ function MainCtrl($http) {
  */
 function dashboardFlotOne() {
 
-    var data1 = [
+    const data1 = [
         [0, 4],
         [1, 8],
         [2, 5],
@@ -377,7 +377,7 @@ function dashboardFlotOne() {
         [15, 3],
         [16, 6]
     ];
-    var data2 = [
+    const data2 = [
         [0, 1],
         [1, 0],
         [2, 2],
@@ -397,7 +397,7 @@ function dashboardFlotOne() {
         [16, 0]
     ];
 
-    var options = {
+    const options = {
         series: {
             lines: {
                 show: false,
@@ -447,7 +447,7 @@ function dashboardFlotOne() {
  */
 function dashboardFlotTwo() {
 
-    var data1 = [
+    const data1 = [
         [gd(2012, 1, 1), 7],
         [gd(2012, 1, 2), 6],
         [gd(2012, 1, 3), 4],
@@ -481,7 +481,7 @@ function dashboardFlotTwo() {
         [gd(2012, 1, 31), 25]
     ];
 
-    var data2 = [
+    const data2 = [
         [gd(2012, 1, 1), 800],
         [gd(2012, 1, 2), 500],
         [gd(2012, 1, 3), 600],
@@ -516,7 +516,7 @@ function dashboardFlotTwo() {
     ];
 
 
-    var dataset = [
+    const dataset = [
         {
             label: "Number of orders",
             grow:{stepMode:"linear"},
@@ -555,7 +555,7 @@ function dashboardFlotTwo() {
     ];
 
 
-    var options = {
+    const options = {
         grid: {
             hoverable: true,
             clickable: true,
@@ -621,14 +621,14 @@ function dashboardFlotTwo() {
  */
 function dashboardFive() {
 
-    var data1 = [
+    const data1 = [
         [0,4],[1,8],[2,5],[3,10],[4,4],[5,16],[6,5],[7,11],[8,6],[9,11],[10,20],[11,10],[12,13],[13,4],[14,7],[15,8],[16,12]
     ];
-    var data2 = [
+    const data2 = [
         [0,0],[1,2],[2,7],[3,4],[4,11],[5,4],[6,2],[7,5],[8,11],[9,5],[10,4],[11,1],[12,5],[13,2],[14,5],[15,2],[16,0]
     ];
 
-    var options = {
+    const options = {
         series: {
             lines: {
                 show: false,
@@ -1256,8 +1256,8 @@ function sparklineChartCtrl() {
     /**
      * Inline chart
      */
-    var inlineData = [34, 43, 43, 35, 44, 32, 44, 52, 25];
-    var inlineOptions = {
+    const inlineData = [34, 43, 43, 35, 44, 32, 44, 52, 25];
+    const inlineOptions = {
         type: 'line',
         lineColor: '#17997f',
         fillColor: '#1ab394'
@@ -1266,8 +1266,8 @@ function sparklineChartCtrl() {
     /**
      * Bar chart
      */
-    var barSmallData = [5, 6, 7, 2, 0, -4, -2, 4];
-    var barSmallOptions = {
+    const barSmallData = [5, 6, 7, 2, 0, -4, -2, 4];
+    const barSmallOptions = {
         type: 'bar',
         barColor: '#1ab394',
         negBarColor: '#c6c6c6'
@@ -1276,8 +1276,8 @@ function sparklineChartCtrl() {
     /**
      * Pie chart
      */
-    var smallPieData = [1, 1, 2];
-    var smallPieOptions = {
+    const smallPieData = [1, 1, 2];
+    const smallPieOptions = {
         type: 'pie',
         sliceColors: ['#1ab394', '#b3b3b3', '#e4f0fb']
     };
@@ -1285,8 +1285,8 @@ function sparklineChartCtrl() {
     /**
      * Long line chart
      */
-    var longLineData = [34, 43, 43, 35, 44, 32, 15, 22, 46, 33, 86, 54, 73, 53, 12, 53, 23, 65, 23, 63, 53, 42, 34, 56, 76, 15, 54, 23, 44];
-    var longLineOptions = {
+    const longLineData = [34, 43, 43, 35, 44, 32, 15, 22, 46, 33, 86, 54, 73, 53, 12, 53, 23, 65, 23, 63, 53, 42, 34, 56, 76, 15, 54, 23, 44];
+    const longLineOptions = {
         type: 'line',
         lineColor: '#17997f',
         fillColor: '#ffffff'
@@ -1295,8 +1295,8 @@ function sparklineChartCtrl() {
     /**
      * Tristate chart
      */
-    var tristateData = [1, 1, 0, 1, -1, -1, 1, -1, 0, 0, 1, 1];
-    var tristateOptions = {
+    const tristateData = [1, 1, 0, 1, -1, -1, 1, -1, 0, 0, 1, 1];
+    const tristateOptions = {
         type: 'tristate',
         posBarColor: '#1ab394',
         negBarColor: '#bfbfbf'
@@ -1305,8 +1305,8 @@ function sparklineChartCtrl() {
     /**
      * Discrate chart
      */
-    var discreteData = [4, 6, 7, 7, 4, 3, 2, 1, 4, 4, 5, 6, 3, 4, 5, 8, 7, 6, 9, 3, 2, 4, 1, 5, 6, 4, 3, 7, ];
-    var discreteOptions = {
+    const discreteData = [4, 6, 7, 7, 4, 3, 2, 1, 4, 4, 5, 6, 3, 4, 5, 8, 7, 6, 9, 3, 2, 4, 1, 5, 6, 4, 3, 7, ];
+    const discreteOptions = {
         type: 'discrete',
         lineColor: '#1ab394'
     };
@@ -1314,8 +1314,8 @@ function sparklineChartCtrl() {
     /**
      * Pie chart
      */
-    var pieCustomData = [52, 12, 44];
-    var pieCustomOptions = {
+    const pieCustomData = [52, 12, 44];
+    const pieCustomOptions = {
         type: 'pie',
         height: '150px',
         sliceColors: ['#1ab394', '#b3b3b3', '#e4f0fb']
@@ -1324,8 +1324,8 @@ function sparklineChartCtrl() {
     /**
      * Bar chart
      */
-    var barCustomData = [5, 6, 7, 2, 0, 4, 2, 4, 5, 7, 2, 4, 12, 14, 4, 2, 14, 12, 7];
-    var barCustomOptions = {
+    const barCustomData = [5, 6, 7, 2, 0, 4, 2, 4, 5, 7, 2, 4, 12, 14, 4, 2, 14, 12, 7];
+    const barCustomOptions = {
         type: 'bar',
         barWidth: 8,
         height: '150px',
@@ -1336,8 +1336,8 @@ function sparklineChartCtrl() {
     /**
      * Line chart
      */
-    var lineCustomData = [34, 43, 43, 35, 44, 32, 15, 22, 46, 33, 86, 54, 73, 53, 12, 53, 23, 65, 23, 63, 53, 42, 34, 56, 76, 15, 54, 23, 44];
-    var lineCustomOptions = {
+    const lineCustomData = [34, 43, 43, 35, 44, 32, 15, 22, 46, 33, 86, 54, 73, 53, 12, 53, 23, 65, 23, 63, 53, 42, 34, 56, 76, 15, 54, 23, 44];
+    const lineCustomOptions = {
         type: 'line',
         lineWidth: 1,
         height: '150px',
@@ -1381,15 +1381,15 @@ function widgetFlotChart() {
     /**
      * Flot chart data and options
      */
-    var d1 = [[1262304000000, 6], [1264982400000, 3057], [1267401600000, 20434], [1270080000000, 31982], [1272672000000, 26602], [1275350400000, 27826], [1277942400000, 24302], [1280620800000, 24237], [1283299200000, 21004], [1285891200000, 12144], [1288569600000, 10577], [1291161600000, 10295]];
-    var d2 = [[1262304000000, 5], [1264982400000, 200], [1267401600000, 1605], [1270080000000, 6129], [1272672000000, 11643], [1275350400000, 19055], [1277942400000, 30062], [1280620800000, 39197], [1283299200000, 37000], [1285891200000, 27000], [1288569600000, 21000], [1291161600000, 17000]];
+    const d1 = [[1262304000000, 6], [1264982400000, 3057], [1267401600000, 20434], [1270080000000, 31982], [1272672000000, 26602], [1275350400000, 27826], [1277942400000, 24302], [1280620800000, 24237], [1283299200000, 21004], [1285891200000, 12144], [1288569600000, 10577], [1291161600000, 10295]];
+    const d2 = [[1262304000000, 5], [1264982400000, 200], [1267401600000, 1605], [1270080000000, 6129], [1272672000000, 11643], [1275350400000, 19055], [1277942400000, 30062], [1280620800000, 39197], [1283299200000, 37000], [1285891200000, 27000], [1288569600000, 21000], [1291161600000, 17000]];
 
-    var flotChartData1 = [
+    const flotChartData1 = [
         { label: "Data 1", data: d1, color: '#17a084'},
         { label: "Data 2", data: d2, color: '#127e68' }
     ];
 
-    var flotChartOptions1 = {
+    const flotChartOptions1 = {
         xaxis: {
             tickDecimals: 0
         },
@@ -1419,11 +1419,11 @@ function widgetFlotChart() {
         }
     };
 
-    var flotChartData2 = [
+    const flotChartData2 = [
         { label: "Data 1", data: d1, color: '#19a0a1'}
     ];
 
-    var flotChartOptions2 = {
+    const flotChartOptions2 = {
         xaxis: {
             tickDecimals: 0
         },
@@ -1453,12 +1453,12 @@ function widgetFlotChart() {
         }
     };
 
-    var flotChartData3 = [
+    const flotChartData3 = [
         { label: "Data 1", data: d1, color: '#fbbe7b'},
         { label: "Data 2", data: d2, color: '#f8ac59' }
     ];
 
-    var flotChartOptions3 = {
+    const flotChartOptions3 = {
         xaxis: {
             tickDecimals: 0
         },
@@ -1511,21 +1511,21 @@ function modalDemoCtrl($scope, $uibModal) {
 
     $scope.open = function () {
 
-        var modalInstance = $uibModal.open({
+        const modalInstance = $uibModal.open({
             templateUrl: 'views/modal_example.html',
             controller: 'ModalInstanceCtrl'
         });
     };
 
     $scope.open1 = function () {
-        var modalInstance = $uibModal.open({
+        const modalInstance = $uibModal.open({
             templateUrl: 'views/modal_example1.html',
             controller: 'ModalInstanceCtrl'
         });
     };
 
     $scope.open2 = function () {
-        var modalInstance = $uibModal.open({
+        const modalInstance = $uibModal.open({
             templateUrl: 'views/modal_example2.html',
             controller: 'ModalInstanceCtrl',
             windowClass: "animated fadeIn"
@@ -1533,7 +1533,7 @@ function modalDemoCtrl($scope, $uibModal) {
     };
 
     $scope.open3 = function (size) {
-        var modalInstance = $uibModal.open({
+        const modalInstance = $uibModal.open({
             templateUrl: 'views/modal_example3.html',
             size: size,
             controller: 'ModalInstanceCtrl'
@@ -1541,7 +1541,7 @@ function modalDemoCtrl($scope, $uibModal) {
     };
 
     $scope.open4 = function () {
-        var modalInstance = $uibModal.open({
+        const modalInstance = $uibModal.open({
             templateUrl: 'views/modal_example2.html',
             controller: 'ModalInstanceCtrl',
             windowClass: "animated flipInY"
@@ -1689,10 +1689,10 @@ function wizardCtrl($scope, $rootScope) {
  */
 function CalendarCtrl($scope) {
 
-    var date = new Date();
-    var d = date.getDate();
-    var m = date.getMonth();
-    var y = date.getFullYear();
+    const date = new Date();
+    const d = date.getDate();
+    const m = date.getMonth();
+    const y = date.getFullYear();
 
     // Events
     $scope.events = [
@@ -2038,11 +2038,11 @@ function nestableCtrl($scope) {
         scope.toggle();
     };
     $scope.moveLastToTheBeginning = function () {
-        var a = $scope.data.pop();
+        const a = $scope.data.pop();
         $scope.data.splice(0,0, a);
     };
     $scope.newSubItem = function(scope) {
-        var nodeData = scope.$modelValue;
+        const nodeData = scope.$modelValue;
         nodeData.nodes.push({
             id: nodeData.id * 10 + nodeData.nodes.length,
             title: nodeData.title + '.' + (nodeData.nodes.length + 1),
@@ -2513,11 +2513,11 @@ function chartistCtrl() {
         }
     }
 
-    var times = function (n) {
+    const times = function (n) {
         return Array.apply(null, new Array(n));
     };
 
-    var prepareData = times(26).map(Math.random).reduce(function (data, rnd, index) {
+    let prepareData = times(26).map(Math.random).reduce(function (data, rnd, index) {
         data.labels.push(index + 1);
         data.series.forEach(function (series) {
             series.push(Math.random() * 100)
@@ -2527,7 +2527,7 @@ function chartistCtrl() {
     }, {
         labels: [],
         series: times(4).map(function () {
-            return new Array()
+            return []
         })
     });
 
@@ -2576,13 +2576,13 @@ function chartistCtrl() {
         }
     }
 
-    var prepareData = {
-        series: [5, 3, 4]
-    }
+//    var prepareData = {
+//        series: [5, 3, 4]
+//    }
 
     this.pieData = prepareData
 
-    var sum = function (a, b) {
+    const sum = function (a, b) {
         return a + b
     };
 
@@ -3475,7 +3475,7 @@ function pdfCtrl($scope) {
 
 function passwordMeterCtrl($scope){
 
-    var options1 = {};
+    const options1 = {};
     options1.ui = {
         container: "#pwd-container1",
         showVerdictsInsideProgressBar: true,
@@ -3488,7 +3488,7 @@ function passwordMeterCtrl($scope){
     };
     $scope.option1 = options1;
 
-    var options2 = {};
+    const options2 = {};
     options2.ui = {
         container: "#pwd-container2",
         showStatus: true,
@@ -3499,7 +3499,7 @@ function passwordMeterCtrl($scope){
     };
     $scope.option2 = options2;
 
-    var options3 = {};
+    const options3 = {};
     options3.ui = {
         container: "#pwd-container3",
         showVerdictsInsideProgressBar: true,
@@ -3513,7 +3513,7 @@ function passwordMeterCtrl($scope){
     };
     $scope.option3 = options3;
 
-    var options4 = {};
+    const options4 = {};
     options4.ui = {
         container: "#pwd-container4",
         viewports: {

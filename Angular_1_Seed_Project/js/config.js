@@ -45,10 +45,29 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, IdlePro
             data: { pageTitle: 'Example view' }
         })
 
+        .state('calendar', {
+            abstract: true,
+            url: "/calendar",
+            templateUrl: "views/common/content.html"
+        })
+
         .state('dashboards', {
             abstract: true,
             url: "/dashboards",
             templateUrl: "views/common/content.html"
+        })
+
+        .state('cases', {
+            abstract: true,
+            url: "/cases",
+            templateUrl: "views/common/content.html",
+            resolve: {
+                loadPlugin: function($ocLazyLoad) {
+                    return $ocLazyLoad.load([{
+                        files: ['js/plugins/']
+                    }])
+                }
+            }
         })
 }
 angular
